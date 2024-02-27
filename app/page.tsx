@@ -9,7 +9,7 @@ import shoe from '@/public/images/shoe.webp'
 export default function Home() {
   return (
     <section className='py-36'>
-      <div className='container flex items-center justify-center'>
+      {/* <div className='container flex items-center justify-center'>
         <Card className='py-4 lg:w-3/4 xl:w-1/2'>
           <CardBody className='overflow-visible py-2'>
             <div className='flex gap-6'>
@@ -40,7 +40,10 @@ export default function Home() {
             </div>
           </CardBody>
         </Card>
-      </div>
+      </div> */}
+
+      <h1 id='welcome'>Welcome</h1>
+      <h5 id='sub-welcome'>OJT DTM C</h5>
     </section>
   )
 }
