@@ -5,6 +5,7 @@ import Providers from './providers'
 import Link from 'next/link'
 import ThemeSwitcher from './components/ThemeSwitcher'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -22,17 +23,20 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <header className='py-6'>
-            <nav className='container flex items-center justify-between'>
-              <ul>
-                <li>
-                  <Link href='/'>Home</Link>
-                </li>
+            <nav className='container flex items-center justify-between' id='nav-bar'>
+              <ul className='ul_navbar'>
+                <li><Link href='/'>Home</Link></li>
+                <li><Link href='/ml_page'>Titanic Prediction Demo</Link></li>
+                <li><Link href='/ocr'>OCR CPF Demo</Link></li>
+                <li><Link href='/sentiment_analysis'>Sentiment Analysis Demo</Link></li>
               </ul>
-              <ThemeSwitcher />
+              
             </nav>
           </header>
           <main>{children}</main>
-          <footer></footer>
+          <footer>
+          <ThemeSwitcher />
+          </footer>
         </Providers>
       </body>
     </html>
